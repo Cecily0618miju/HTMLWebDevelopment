@@ -1,0 +1,421 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* ================= 顶部导航 ================= */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background: transparent;
+  padding: 10px 57px 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 2.2rem;
+  color: #425244;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-family: "行书", serif;
+}
+
+/* 导航条整体 */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 菜单列表 */
+.nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  white-space: nowrap; /* 防止“联系我们”换行 */
+}
+
+/* 每一项 */
+.nav li {
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 链接本身 */
+.nav li a {
+  color: inherit;
+  display: block;
+  height: 100%;
+  white-space: nowrap; /* 再保险一层 */
+  padding: 4px 0;
+}
+
+/* 默认下划线隐藏 */
+.nav li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #425244;
+  border-radius: 2px;
+  margin: 6px auto 0 auto;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+/* 选中态 */
+.nav li.active,
+.nav li:hover {
+  color: #425244;
+}
+
+.nav li.active::after,
+.nav li:hover::after {
+  width: 28px;
+  opacity: 1;
+}
+
+/* 搜索框 */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #425244;
+  border-radius: 22px;
+  padding: 0 16px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  width: 90px;
+  padding: 6px 0;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-search {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* ================= 页面主体 ================= */
+body {
+  background: url(../img/buy/background.png) no-repeat;
+  background-size: cover;
+
+  /* --- 【核心修改：整体缩小至 80%】 --- */
+  width: 100%;
+  min-height: 100vh; /* 保证缩放后背景也能铺满 */
+  overflow-x: hidden; /* 防止横向滚动条 */
+
+  zoom: 0.8; /* Chrome, Edge, Safari */
+}
+
+#page {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 3814px;
+  margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 顶部商品模块 */
+#top {
+  width: 100%;
+  max-width: 1753px;
+  height: auto;
+  min-height: 917px;
+  margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#top > ul > li {
+  display: inline-block;
+}
+
+#topIn {
+  position: relative;
+  left: 108px;
+}
+
+#topIn > li {
+  margin-bottom: 44px;
+}
+
+#topIn section {
+  font-size: 36px;
+  color: #4d6751;
+  font-weight: bold;
+}
+
+#topIn section > span:first-of-type {
+  color: #6b6868;
+}
+
+#topIn section > span:last-of-type {
+  color: #5f5e5d;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+#suit > span {
+  display: inline-block;
+  width: 144px;
+  height: 53px;
+  border: 2px solid #5f5e5d;
+  border-radius: 15px;
+  margin-right: 40px;
+  line-height: 53px;
+  text-align: center;
+  cursor: pointer;
+  color: #5f5e5d;
+  font-size: 26px;
+}
+
+#suit .spanActive {
+  border: 2px solid #76342d;
+  color: #a1453a;
+  font-weight: bold;
+}
+
+#imgShow img {
+  margin-left: 27px;
+  cursor: pointer;
+  height: 426px;
+}
+
+#topIn > li:last-of-type {
+  margin-left: 40px;
+}
+
+#topIn > li:last-of-type > a {
+  display: inline-block;
+  width: 415px;
+  height: 93px;
+  border-radius: 15px;
+  line-height: 93px;
+  text-align: center;
+  background-color: #76342d;
+  color: white;
+  font-size: 30px;
+  vertical-align: bottom;
+  margin-left: 20px;
+}
+
+/* 中部大图模块 */
+#middle {
+  width: 100%;
+  max-width: 1591px;
+  height: auto;
+  min-height: 2429px;
+  text-align: center;
+  margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#middle img {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+#middle > img:first-of-type {
+  border: 1px solid #76342d;
+}
+
+/* 底部 */
+#bottom {
+  width: 100%;
+  height: 196px;
+  background: url(../img/shopping1/bottom.png);
+  position: relative;
+}
+
+#three {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 369px;
+  top: 26px;
+}
+
+#three li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  line-height: 62px;
+  text-align: center;
+}
+
+#service {
+  position: absolute;
+  top: 108px;
+  left: 369px;
+  color: white;
+}
+
+#service span {
+  margin-right: 45px;
+}
+
+#service p {
+  margin-top: 20px;
+}
+
+#contact {
+  width: 400px;
+  height: 100%;
+  text-align: right;
+  float: right;
+  color: white;
+  line-height: 45px;
+  margin: 83px 370px 0px 0px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ================= 响应式设计 ================= */
+@media screen and (max-width: 1200px) {
+  #page {
+    padding: 0 15px;
+  }
+
+  .header {
+    padding: 10px 30px 0;
+  }
+
+  #top {
+    padding: 0 15px;
+  }
+
+  #topIn {
+    left: 0;
+    padding: 0 15px;
+  }
+
+  #middle {
+    padding: 0 15px;
+  }
+
+  #bottom {
+    height: auto;
+    min-height: 196px;
+  }
+
+  #three {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 20px auto;
+  }
+
+  #service {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  #contact {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 15px 0;
+    height: auto;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav li {
+    font-size: 14px;
+  }
+
+  #topIn section {
+    font-size: 24px;
+  }
+
+  #topIn > li:last-of-type > a {
+    width: 100%;
+    max-width: 415px;
+    font-size: 20px;
+  }
+
+  #imgShow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #imgShow img {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  #suit > span {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav li {
+    font-size: 12px;
+  }
+
+  #topIn section {
+    font-size: 18px;
+  }
+
+  #suit > span {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+}

@@ -1,0 +1,619 @@
+/* ================= 全局重置 ================= */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: url(../img/cultureT/background.png) no-repeat center top;
+  background-size: cover;
+  font-family: "宋体", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #776b6a;
+}
+
+/* 页面包裹 */
+#page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================= 顶部导航 ================= */
+.header {
+  width: 100%;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.logo {
+  font-size: 2.2rem;
+  color: #425244;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-family: "行书", serif;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav li {
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav li a {
+  color: inherit;
+  display: block;
+  padding: 4px 0;
+}
+
+/* hover 下划线 */
+.nav li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #425244;
+  border-radius: 2px;
+  margin: 6px auto 0 auto;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.nav li.active,
+.nav li:hover {
+  color: #425244;
+}
+
+.nav li.active::after,
+.nav li:hover::after {
+  width: 28px;
+  opacity: 1;
+}
+
+/* 搜索框 */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #425244;
+  border-radius: 22px;
+  padding: 0 16px;
+  height: 38px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  width: 90px;
+  padding: 6px 0;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-search {
+  width: 16px;
+  height: 16px;
+}
+
+/* main 区域 */
+#main {
+  width: 100%;
+}
+
+/* ================= 朝代导航 ================= */
+#dynasty {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#dynasty li {
+  flex: 1;
+}
+
+#dynasty a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #8b372d;
+  color: #e1b6b1;
+  font-size: 24px;
+}
+
+#dynasty .dynastyStyle {
+  color: #ffffff;
+  background: linear-gradient(to bottom, #8b372d, #c6958f);
+  font-weight: 500;
+}
+
+/* ================= 标题文字块 ================= */
+#title {
+  width: 100%;
+  max-width: 1000px;
+  margin: 80px auto 0 auto;
+  text-align: center;
+  color: #000;
+}
+
+#title h1 {
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+#title p {
+  max-width: 1000px;
+  margin: 0 auto 4px auto;
+  line-height: 36px;
+}
+
+/* 图片统一自适应 */
+#background1 img,
+#background2 img,
+#background2 span img,
+#imgList img,
+#background4 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   模块一：宋代服饰特点（大画 + 右上白色文字卡片）
+   ========================================================= */
+#background1 {
+  max-width: 1200px;
+  margin: 120px auto 0 auto;
+  position: relative;
+}
+
+#background1 > img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#background1 > div {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 26px 40px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+#B1 {
+  display: none;
+}
+
+#B1Text {
+  position: static;
+}
+
+#background1 > div h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 6px;
+  font-size: 28px;
+}
+
+#background1 > div p {
+  line-height: 30px;
+  font-size: 18px;
+  margin-top: 6px;
+  text-indent: 2em;
+}
+
+/* =========================================================
+   模块二：阶层与服饰
+   ========================================================= */
+#background2 {
+  max-width: 1200px;
+  margin: 120px auto 0 auto;
+  text-align: center;
+}
+
+#background2 h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+#background2 > p {
+  background-color: #cccfc8;
+  width: 284px;
+  height: 3px;
+  margin: 0 auto 40px auto;
+}
+
+#background2 > section p {
+  font-size: 22px;
+  background-color: white;
+  height: 56px;
+  line-height: 56px;
+  color: black;
+}
+
+#background2 ul {
+  display: inline-block;
+}
+
+#background2 li {
+  display: inline-block;
+  margin: 0 40px;
+  width: 260px;
+  border: 2px solid #acad9b;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+#background2 span {
+  display: block;
+}
+
+/* =========================================================
+   模块三：工艺与材质（轮播 + 白色文字卡片）
+   ========================================================= */
+/* 整块区域 */
+.craft-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 120px auto;
+}
+
+/* 标题样式 */
+.craft-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.craft-title h3 {
+  font-size: 36px;
+  color: #776b6a;
+}
+
+.craft-title .line {
+  width: 240px;
+  height: 3px;
+  background: #cccfc8;
+  margin: 12px auto 0;
+}
+
+/* 图片 + 文字块 */
+.craft-media {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/* 大图 */
+.craft-img {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 文字白色卡片 */
+.craft-text {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  margin: -80px auto 0; /* 关键！将文字吸附到图片底部 */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+  color: #776b6a;
+  line-height: 32px;
+}
+
+/* 响应式 */
+@media screen and (max-width: 768px) {
+  .craft-text {
+    margin: 20px auto 0;
+    box-shadow: none;
+    padding: 20px;
+  }
+}
+
+.craft-section {
+  max-width: 1200px;
+  margin: 120px auto 0 auto;
+}
+
+/* 标题（含下划线） */
+#one {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#one h3 {
+  font-size: 32px;
+  color: #776b6a;
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+#one h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 240px;
+  height: 3px;
+  background-color: #cccfc8;
+}
+
+/* 图片 + 文字容器 */
+.craft-media {
+  position: relative;
+  padding-bottom: 140px; /* 为下面悬浮的文字留空间 */
+}
+
+/* 轮播保持居中 */
+#carousel {
+  width: 722px;
+  max-width: 100%;
+  height: 301px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#imgList {
+  width: 3610px;
+  height: 301px;
+  position: absolute;
+  left: -722px;
+  transition: all 0.5s ease 0s;
+}
+
+#imgList img {
+  width: 722px;
+  height: 301px;
+}
+
+#carousel ul {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+}
+
+#carousel li {
+  display: inline-block;
+  width: 34px;
+  height: 4px;
+  background-color: white;
+}
+
+#carousel .BGC {
+  background-color: #996666;
+}
+
+/* 悬浮在轮播底部的文字卡片 */
+.craft-text {
+  position: absolute;
+  left: 50%;
+  bottom: -80px;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 30px 40px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+  line-height: 32px;
+  color: #776b6a;
+}
+
+.craft-text p + p {
+  margin-top: 8px;
+  text-indent: 2em;
+}
+
+/* =========================================================
+   模块四：配饰
+   ========================================================= */
+#background4 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 120px auto 0 auto;
+  text-align: center;
+}
+
+#background4 h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px auto 16px auto;
+  color: #776b6a;
+}
+
+#background4 p {
+  background-color: #cccfc8;
+  width: 300px;
+  height: 3px;
+  margin: 0 auto 40px auto;
+}
+
+#background4 ul {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+#background4 img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+}
+
+/* ================= 底部 ================= */
+#bottom {
+  width: 100%;
+  background: #8b372d;
+  margin-top: 120px;
+  padding: 40px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+#three {
+  display: flex;
+  gap: 20px;
+}
+
+#three li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  line-height: 46px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#service {
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+
+#service span {
+  margin: 0 10px;
+}
+
+#service p {
+  margin-top: 12px;
+}
+
+#contact {
+  text-align: right;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ================= 响应式 ================= */
+@media screen and (max-width: 1200px) {
+  #page {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  #contact {
+    text-align: center;
+  }
+
+  #background1 > div {
+    width: 80%;
+    right: 10%;
+  }
+
+  #background2 li {
+    margin: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #title h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  #title p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  #background1 > div {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .craft-media {
+    padding-bottom: 0;
+  }
+
+  .craft-text {
+    position: static;
+    transform: none;
+    margin: 24px auto 0 auto;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #title h1 {
+    font-size: 20px;
+  }
+
+  #title p {
+    font-size: 12px;
+  }
+
+  #background4 img {
+    width: 220px;
+    height: 220px;
+  }
+}

@@ -1,0 +1,647 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  background: url(../img/cultureT/background.png) no-repeat;
+  background-size: cover;
+  font-family: "宋体", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #776b6a;
+  zoom: 80%;
+}
+
+/* 页面包裹 */
+
+/* 顶部导航 header 使用 flex 布局 */
+.header {
+  width: 100%;
+  margin: 0 auto;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.logo {
+  font-size: 2.2rem;
+  color: #425244;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-family: "行书", serif;
+}
+
+/* 导航条 */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* li + a 的样式 */
+.nav li {
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+}
+
+/* 选中态 / hover 下划线 + 变色 */
+.nav li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #425244;
+  border-radius: 2px;
+  margin: 6px auto 0 auto;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.nav li.active,
+.nav li:hover {
+  color: #425244;
+}
+
+.nav li.active::after,
+.nav li:hover::after {
+  width: 28px;
+  opacity: 1;
+}
+
+/* 搜索框（也在导航 flex 里） */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #425244;
+  border-radius: 22px;
+  padding: 0 16px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  width: 90px;
+  padding: 6px 0;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-search {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* main 区域 */
+#main {
+  width: 100%;
+  color: #776b6a;
+}
+
+/* ✅ 朝代导航整屏均匀铺满，不留空隙，不拉伸文字 */
+#dynasty {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+#dynasty li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dynasty a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8b372d;
+  color: #e1b6b1;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+#dynasty .dynastyStyle {
+  background: linear-gradient(to bottom, #8b372d, #c6958f);
+  color: #fff;
+}
+
+/* ================= 标题文字块 ================= */
+#title {
+  width: 100%;
+  max-width: 1000px;
+  margin: 80px auto 0 auto;
+  text-align: center;
+  color: #000;
+}
+
+#title h1 {
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+#title p {
+  max-width: 1000px;
+  margin: 0 auto 4px auto;
+  line-height: 36px;
+}
+/* 第一块：图片 + 文本，用 flex 布局 */
+#background1 {
+  width: 100%;
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+#background1 > img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+#background1 > div {
+  width: 955px;
+  max-width: 100%;
+  min-height: 530px;
+  background-color: rgba(207, 188, 178, 0.5);
+  border-radius: 25px;
+  padding: 30px 40px;
+}
+
+#background1 > div > h3 {
+  width: 100%;
+  text-align: center;
+  line-height: 135px;
+  font-weight: 500;
+  letter-spacing: 10px;
+  font-size: 30px;
+}
+
+#background1 > div > p {
+  width: 100%;
+  line-height: 40px;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 第二块：文本 + 图片，用 flex + 定位 结合 */
+#background2 {
+  width: 100%;
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative; /* 给“了解更多”定位用 */
+}
+
+#background2 > div {
+  width: 955px;
+  max-width: 100%;
+  min-height: 530px;
+  background-color: rgba(207, 188, 178, 0.5);
+  border-radius: 25px;
+  padding: 30px 40px;
+}
+
+#background2 > div > h3 {
+  width: 100%;
+  text-align: center;
+  line-height: 135px;
+  font-weight: 500;
+  letter-spacing: 10px;
+  font-size: 30px;
+}
+
+#background2 > div > p {
+  width: 100%;
+  line-height: 40px;
+  letter-spacing: 5px;
+  font-size: 20px;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+#background2 > img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+/* “了解更多” 竖排文字，使用定位叠在图片旁边 */
+#background2 > a {
+  position: absolute;
+  right: 12%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  color: #a1605e;
+  writing-mode: vertical-rl;
+}
+
+/* 轮播图：保留原来的定位效果 */
+#carousel {
+  width: 391px;
+  height: 522px;
+  overflow: hidden;
+  position: relative;
+  top: -640px;
+  left: 1276px;
+  cursor: pointer;
+}
+
+#imgList {
+  width: 2346px;
+  height: 522px;
+  position: absolute;
+  left: -391px;
+  transition: all 0.5s ease 0s;
+}
+
+#imgList > img {
+  width: 391px;
+  height: 522px;
+}
+
+#carousel ul {
+  position: absolute;
+  left: 36%;
+  bottom: 22px;
+}
+
+#carousel li {
+  display: inline-block;
+  width: 34px;
+  height: 4px;
+  background-color: white;
+}
+
+#carousel .BGC {
+  background-color: #996666;
+}
+
+/* 第三块：传统纹样，用 flex 排卡片，内部再用定位做遮罩 */
+#background3 {
+  width: 100%;
+  margin: -490px auto 0;
+}
+
+#background3 h3 {
+  width: 234px;
+  height: 72px;
+  background-color: #8b372d;
+  color: white;
+  line-height: 72px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 300;
+  margin: 20px auto 50px auto;
+}
+
+#background3 ul {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+#background3 li {
+  width: 475px;
+  height: 624px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#background3 li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 遮罩层 */
+#background3 li > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0;
+  transition: all 0.4s;
+  top: 0;
+  left: 0;
+}
+
+/* 说明文字 */
+#background3 li > span {
+  display: block;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  line-height: 1.8;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+/* hover 显示遮罩和文字 */
+#background3 li:hover > div,
+#background3 li:hover > span {
+  opacity: 0.8;
+}
+
+/* 底部花纹图片 */
+#main > img {
+  margin-top: 100px;
+  margin-left: 130px;
+}
+
+.footer-section {
+  width: 100%;
+  background: #8c3a2b;
+  padding: 38px 0 18px 0;
+  margin-top: 60px;
+  color: #fff;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+.footer-inner {
+  margin: 0 auto;
+  padding: 0px 233px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1660px;
+  box-sizing: border-box;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+  margin-bottom: 18px;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-icon {
+  width: 37px;
+  height: 37px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  object-fit: contain;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 38px;
+  font-family: MicrosoftYaHeiLight;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+}
+
+.footer-menu span {
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-copyright {
+  color: #e8d8d0;
+  font-size: 0.8rem;
+  margin-left: 0;
+  margin-top: 8px;
+  letter-spacing: 0.04em;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.footer-phone,
+.footer-email {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.footer-icon.phone,
+.footer-icon.email {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: none;
+}
+/* 响应式设计 */
+@media screen and (max-width: 1200px) {
+  #page {
+    padding: 0 15px;
+  }
+
+  .header {
+    padding: 0 20px;
+  }
+
+  #title {
+    margin-top: 40px;
+  }
+
+  #background1,
+  #background2 {
+    margin-top: 80px;
+  }
+
+  /* 轮播图在小屏不再悬浮到右侧 */
+  #carousel {
+    position: static;
+    margin: 40px auto 0;
+  }
+
+  #bottom {
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  #dynasty {
+    height: auto;
+    flex-direction: column;
+  }
+
+  #dynasty a {
+    height: 60px;
+    font-size: 18px;
+  }
+
+  #background1,
+  #background2 {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  #background1 > div,
+  #background2 > div {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  #title h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  #title p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* 了解更多按钮移到底部水平显示，避免遮挡 */
+  #background2 > a {
+    position: static;
+    writing-mode: horizontal-tb;
+    transform: none;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav li {
+    font-size: 12px;
+  }
+
+  #title h1 {
+    font-size: 20px;
+  }
+
+  #title p {
+    font-size: 12px;
+  }
+
+  #background3 h3 {
+    font-size: 22px;
+    width: 180px;
+  }
+
+  #background3 li {
+    width: 100%;
+    height: auto;
+  }
+
+  #background3 li img {
+    height: auto;
+  }
+
+  #background3 li > span {
+    font-size: 18px;
+  }
+}

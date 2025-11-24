@@ -1,0 +1,391 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background: url(../img/shopping1/background.png) no-repeat;
+  background-size: cover;
+}
+#page {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 2926px;
+  margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#one {
+  width: 100%;
+  height: 625px;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background: transparent;
+  padding-top: 10px;
+  padding-left: 57px;
+  padding-right: 57px;
+}
+#one > img {
+  width: 100%;
+}
+header {
+  width: 100%;
+  height: 787px;
+  border-bottom: 2px solid #a9a8a7;
+}
+header > section {
+  width: 100%;
+  height: 82px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 76px;
+  box-sizing: border-box;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header li {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  height: 100%;
+  margin: 0;
+  flex: 0 1 auto;
+}
+header li:nth-of-type(6) {
+  width: 134px;
+  height: 40px;
+  flex-shrink: 0;
+}
+header li:last-of-type {
+  margin-left: 0;
+  flex-shrink: 0;
+}
+header a {
+  color: black;
+}
+header p {
+  width: 30px;
+  height: 2px;
+  background-color: #4d6751;
+  margin-top: 7px;
+}
+header h1 {
+  width: 200px;
+  height: 16%;
+  line-height: 82px;
+  margin-left: 76px;
+  font-family: "隶书";
+  font-size: 40px;
+  letter-spacing: 5px;
+  color: #4d6751;
+}
+
+#main {
+  width: 100%;
+  max-width: 1919px;
+  height: auto;
+  min-height: 2720px;
+  margin-bottom: 110px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#navigationUl {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 77px;
+  left: 169px;
+}
+#navigationUl .bgcAndC {
+  background-color: #ddbfb5;
+  color: #8b372d;
+  border: 2px solid #c9aaa0;
+  font-weight: bold;
+}
+#navigationUl li {
+  display: inline-block;
+  margin-left: 100px;
+  width: 267px;
+  height: 60px;
+}
+#navigationUl a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e3ded8;
+  border-radius: 13px;
+  line-height: 60px;
+  text-align: center;
+  color: #858885;
+}
+#mainUl {
+  width: 100%;
+  height: 100%;
+  margin: -70px 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+#mainUl > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 145px;
+}
+#mainUl > li > p:first-of-type {
+  font-family: "微软雅黑";
+  width: 100%;
+  max-width: 418px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 50px;
+  font-size: 22px;
+}
+#mainUl > li > p:last-of-type {
+  width: 100%;
+  max-width: 418px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 36px;
+  color: #4d6751;
+  font-weight: bold;
+  margin-top: 34px;
+}
+#mainUl > li > p:last-of-type > span:first-of-type {
+  color: #6b6868;
+}
+#mainUl > li > p:last-of-type > span:last-of-type {
+  margin-left: 5px;
+}
+#mainUl > li {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#mainUl li:hover {
+  border-color: red;
+}
+#bottom {
+  width: 100%;
+  height: 196px;
+  background: url(../img/shopping1/bottom.png);
+  position: relative;
+}
+#three {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 369px;
+  top: 26px;
+}
+#three li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  line-height: 62px;
+  text-align: center;
+}
+#service {
+  position: absolute;
+  top: 108px;
+  left: 369px;
+  color: white;
+}
+#service span {
+  margin-right: 45px;
+}
+#service p {
+  margin-top: 20px;
+}
+#contact {
+  width: 400px;
+  height: 100%;
+  text-align: right;
+  float: right;
+  color: white;
+  line-height: 45px;
+  margin: 83px 370px 0px 0px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 1200px) {
+  #page {
+    padding: 0 15px;
+  }
+
+  header > section {
+    padding: 0 30px;
+    flex-wrap: wrap;
+  }
+
+  header h1 {
+    margin-left: 0;
+    font-size: 32px;
+  }
+
+  #mainUl {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  #mainUl li img {
+    width: 100%;
+    height: auto;
+  }
+
+  #bottom {
+    height: auto;
+    min-height: 196px;
+  }
+
+  #three,
+  #service {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  #contact {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header > section {
+    padding: 0 15px;
+    height: auto;
+    min-height: 82px;
+  }
+
+  header ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  header li {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  #navigationUl {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #mainUl {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  header li {
+    font-size: 12px;
+  }
+
+  #navigationUl li a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 480px;
+  height: 52px;
+  background-color: #984e45;
+  border-radius: 34px;
+  overflow: hidden;
+  left: 735px;
+  top: -30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #984e45;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 12px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  transform: translateX(441px);
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:checked + .slider:before {
+  transform: translateX(0px);
+}
+
+.switch-text {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>联系我们 - 华裳古韵</title>
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <div>
+      <!-- 顶部导航 -->
+      <header class="header">
+        <div class="logo">华裳古韵</div>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="index.html">首页</a>
+            </li>
+            <li>
+              <a href="cultureT.html">朝代服饰</a>
+            </li>
+            <li><a href="buy.html">汉服商城</a></li>
+            <li><a href="history.html">文化学堂</a></li>
+            <li class="active">联系我们</li>
+            <div class="search-box">
+              <input type="text" placeholder="" />
+              <button>
+                <img src="./images/search.png" alt="搜索" class="icon-search" />
+              </button>
+            </div>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- 顶部横幅（呼应首页的大图风格，可以简洁一些） -->
+      <section class="banner-carousel contact-banner">
+        <div class="banner-slide active">
+          <div class="banner-content">
+            <h1>与华裳相遇，与古韵相连</h1>
+            <p>
+              如果你对汉服文化有疑问，对产品有建议，或希望与我们合作，<br />
+              欢迎通过以下方式与我们取得联系。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 联系我们主体内容 -->
+      <section class="contact-section">
+        <div class="contact-inner">
+          <!-- 左侧：联系表单 -->
+          <div class="contact-form-card">
+            <div class="contact-form-title">在线留言</div>
+            <div class="contact-form-subtitle">
+              请填写您的需求，我们会尽快与您取得联系。
+            </div>
+            <form class="contact-form">
+              <div class="form-row">
+                <label for="name">您的姓名</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="请输入您的姓名"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="email">邮箱</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="用于接收回复"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="phone">联系电话</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="选填，例如：+86 110"
+                />
+              </div>
+              <div class="form-row">
+                <label for="topic">咨询类型</label>
+                <select id="topic" name="topic">
+                  <option value="product">产品咨询</option>
+                  <option value="culture">文化交流</option>
+                  <option value="cooperate">商务合作</option>
+                  <option value="other">其他问题</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="message">留言内容</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="请描述您的问题或需求..."
+                  required
+                ></textarea>
+              </div>
+              <div class="form-row form-row-submit">
+                <button type="submit" class="contact-submit-btn">
+                  提交留言
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- 右侧：联系方式与二维码等信息 -->
+          <div class="contact-info-card">
+            <div class="contact-info-title">联系方式</div>
+            <div class="contact-info-item">
+              <div class="contact-info-label">客服电话</div>
+              <div class="contact-info-value">+86 110</div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-label">商务合作邮箱</div>
+              <div class="contact-info-value">259706357@qq.com</div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-label">工作时间</div>
+              <div class="contact-info-value">
+                周一至周五 10:00 - 18:00（节假日除外）
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-label">官方社交平台</div>
+              <div class="contact-social-icons">
+                <img
+                  class="footer-icon wechat"
+                  src="./images/wx.png"
+                  alt="微信"
+                />
+                <img class="footer-icon qq" src="./images/qq.png" alt="QQ" />
+                <img
+                  class="footer-icon apple"
+                  src="./images/wb.png"
+                  alt="微博"
+                />
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-label">品牌理念</div>
+              <div class="contact-info-value">
+                以衣为媒，让更多人看见汉服之美，<br />
+                在日常生活中，续写华夏千年衣冠的故事。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 可选：地图/地址文案区域（如果暂时没有真实地址，可以先写文案占位） -->
+      <section class="contact-location-section">
+        <div class="contact-location-inner">
+          <div class="contact-location-title">线下活动 & 体验</div>
+          <div class="contact-location-desc">
+            目前我们正筹备线下汉服体验活动与文化沙龙，<br />
+            未来将在一线城市陆续开放线下主题店与快闪空间，敬请期待。
+          </div>
+        </div>
+      </section>
+
+      <!-- 页脚（与首页保持一致） -->
+      <footer class="footer-section">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div class="footer-icons">
+              <img class="footer-icon wechat" src="./images/wx.png" alt="" />
+              <img class="footer-icon qq" src="./images/qq.png" alt="" />
+              <img class="footer-icon apple" src="./images/wb.png" alt="" />
+            </div>
+            <div class="footer-menu">
+              <span>朝代服饰</span>
+              <span>汉服图鉴</span>
+              <span>汉服商城</span>
+              <span>文化学堂</span>
+              <span>联系我们</span>
+            </div>
+            <div class="footer-copyright">
+              Copyright ©2025 Cecily.cn ALL Rights Reserved
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-contact">
+              <img class="footer-icon phone" src="./images/iphone.png" alt="" />
+              <span class="footer-phone">+86 110</span>
+            </div>
+            <div class="footer-contact">
+              <img class="footer-icon email" src="./images/com.png" alt="" />
+              <span class="footer-email">259706357@qq.com</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 如果不需要轮播，这里可以不引入 banner.js -->
+    <!-- <script src="./js/banner.js"></script> -->
+  </body>
+</html>
